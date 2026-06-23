@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+
+  .dark body {
+    @apply bg-slate-900 text-slate-100;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-slate-600;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 focus:ring-slate-300;
+  }
+
+  .btn-ghost {
+    @apply btn text-slate-600 hover:bg-slate-100 hover:text-slate-800 focus:ring-slate-300;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm;
+  }
+
+  .dark .card {
+    @apply bg-slate-800 border-slate-700;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 rounded-lg border border-slate-200 bg-white text-sm placeholder:text-slate-400
+      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all;
+  }
+
+  .dark .input {
+    @apply bg-slate-800 border-slate-600 text-slate-100;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-1;
+  }
+
+  .dark .label {
+    @apply text-slate-300;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .citation-card {
+    @apply bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm;
+  }
+
+  .dark .citation-card {
+    @apply bg-blue-950 border-blue-800;
+  }
+
+  .prose-medical {
+    @apply prose prose-slate max-w-none prose-headings:text-slate-800 prose-a:text-blue-600;
+  }
+
+  .dark .prose-medical {
+    @apply prose-invert prose-headings:text-slate-100;
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600
+      hover:bg-blue-50 hover:text-blue-700 transition-all duration-150 cursor-pointer;
+  }
+
+  .sidebar-item.active {
+    @apply bg-blue-600 text-white hover:bg-blue-700 hover:text-white;
+  }
+
+  .dark .sidebar-item {
+    @apply text-slate-400 hover:bg-slate-700 hover:text-slate-100;
+  }
+
+  .dark .sidebar-item.active {
+    @apply bg-blue-600 text-white;
+  }
+}
+
+@keyframes typing {
+  0%, 60%, 100% { opacity: 1; }
+  30% { opacity: 0.3; }
+}
+
+.typing-dot {
+  animation: typing 1.4s infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
