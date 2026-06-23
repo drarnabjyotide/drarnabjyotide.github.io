@@ -1,0 +1,18 @@
+{
+  "name": "MedMother AI",
+  "short_name": "MedMother",
+  "description": "Medical Education Platform grounded in textbook knowledge",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
